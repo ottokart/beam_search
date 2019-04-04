@@ -84,7 +84,7 @@ def beam_search(initial_state_function, generate_function, X, start_id, end_id, 
             else:
                 fringe.append(n)
 
-        if not fringe or len(hypotheses) >= num_hypotheses:
+        if not fringe:
             break
 
         Y_tm1 = np.array([n.value for n in fringe], dtype=np.int32)
